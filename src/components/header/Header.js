@@ -9,8 +9,8 @@ function Header() {
             <h3>Breeze Studio</h3>
         </div>
         <div className='row'>
-            <div className='profile-img col'>
-                <img src={Photo} />
+            <div className='profile-img-hd col'>
+                <img src={Photo}  alt='Profile'/>
             </div>
             <div className='user col'>
                 <h5>Lona Grace</h5>

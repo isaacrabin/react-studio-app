@@ -34,7 +34,7 @@ function Users() {
           console.log(err);
         });
      
-    })
+    },[])
     //const gotoUserInfo = (id) => {
        //navigate.apply(`/user-details/${id}`);
 

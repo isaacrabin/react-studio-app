@@ -8,19 +8,13 @@ import userApi from '../../common/api/api';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
-
 function Home() {
     const [myUsers, setmyUsers] = useState([]);
     const [albums, setAlbums] = useState([])
     const [album_count, setAlbumCount] =useState(0);
-    
-     const navigate = useNavigate();
-     const history = useNavigate();
 
-     const handleClick = () => {
-       navigate("/users");
-     };
+    const navigate = useNavigate();
+
 
      useEffect(() => {
       //Fetching users on page load
@@ -46,30 +40,22 @@ function Home() {
         });
 
       
-    })
-    // const gotoUserInfo = (id) => {
-    //     navigate.apply(`/user-details/${id}`);
-
-    // }
+    },[])
 
     const renderUsers  = myUsers.map((user) => {
          const albuNo =  myUsers.map((user) => {
             return albums.filter(
               (album) => album.userId === user.id
             );
-          });
-   
-         
+          });    
   
-
-
         return (
-          <div className="row bg-white tb-body">
+          <div className="row bg-white tb-body" key={user.id}>
             <div className="col text-center">{user.name}</div>
             <div className="col text-center">{albuNo.length} Albums</div>
             <div className="col text-center">
-              <button onClick={handleClick}
-                className="btn btn-outline-info rounded">{navigate}
+              <button onClick={() => {navigate(`/user/${user.id}`)} }
+                className="btn btn-outline-info rounded">
                 View User
                 <span>
                   <FaAngleRight />
@@ -78,10 +64,9 @@ function Home() {
             </div>
           </div>
         );
-    },[]
-    
+    })
 
-    )
+    
 
   return (
     <div>

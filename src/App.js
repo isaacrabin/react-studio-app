@@ -17,8 +17,8 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/users" element={<Users />} />
         <Route path="/photos" element={<Photos />} />
-        <Route path="/userdetails/:id" element={<UserDetails />} />
-        <Route path="/album-details/:id" element={<AlbumDetails />} />
+        <Route path="/user/:id" element={<UserDetails />} />
+        <Route path="/album/:id" element={<AlbumDetails />} />
       </Routes>
     </Router>
   );
