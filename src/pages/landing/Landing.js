@@ -24,7 +24,7 @@ function Landing() {
         //Global Google
         // eslint-disable-next-line no-undef
         google.accounts.id.initialize({
-          client_id: '162521638350-hita9hok1c01col50e4ccevci1jpjvbp.apps.googleusercontent.com',
+          client_id: '162521638350-65ggmedg3l7378k3537999gamvqvoe68.apps.googleusercontent.com',
           callback: handleCallBackResponse
         });
 
